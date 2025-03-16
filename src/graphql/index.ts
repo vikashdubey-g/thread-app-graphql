@@ -1,10 +1,10 @@
 import { ApolloServer } from "@apollo/server";
 import { User } from "./user";
 
-// ${User.queries}
 async function createApolloServer() {
   const gqlServer = new ApolloServer({
     typeDefs: `
+        ${User.typeDefs}
         type Query {
              ${User.queries}
         }
